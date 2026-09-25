@@ -1,143 +1,260 @@
-# 📦 Supply Chain Analytics Dashboard with Demand Forecasting
+# 📦 Supply Chain Intelligence & Demand Forecasting Dashboard
 
-An end-to-end, industry-style **Data Analytics + Machine Learning** project built
-with Python and Streamlit. It covers the full pipeline from synthetic data
-generation through cleaning, exploratory analysis, business KPIs, and
-ML-powered demand forecasting — all wrapped in an interactive, filterable
-dashboard.
+An end-to-end **Data Analytics and Machine Learning platform** built with Python and Streamlit for analyzing supply chain operations, monitoring business KPIs, understanding inventory and supplier performance, and forecasting future product demand.
+
+The application combines **interactive analytics, machine learning, anomaly analysis, and demand forecasting** into a multi-page dashboard designed for data-driven supply chain decision-making.
 
 ---
 
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-Forecasting-006400?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+## 🚀 Key Features
 
-## 🚀 Features
-
-- **55,000+ row synthetic supply chain dataset** (orders, products, suppliers,
-  warehouses, shipping, inventory, demand, and more)
-- **Full data cleaning pipeline**: missing values, duplicates, outlier
-  clipping, type fixes, feature engineering
-- **30+ EDA visualizations**: trends, top-N charts, heatmaps, correlation
-  matrix, distributions, boxplots, scatter/pair plots, seasonal & geographic
-  breakdowns, ABC/Pareto analysis
-- **12 headline business KPIs**: revenue, profit, orders, delivery/lead time,
-  inventory turnover, stock availability, delay %, return rate, supplier
-  score, warehouse utilization, forecast accuracy
-- **Demand forecasting** with Linear Regression, Random Forest, and XGBoost —
-  compared on MAE / RMSE / R², with feature importance and a 7–90 day future
-  forecast
-- **9-page interactive Streamlit dashboard** with dark/light theme,
-  multi-filter sidebar (date, country, warehouse, supplier, category,
-  product, transport mode, free-text search), CSV export, and PDF report
-  generation
-- **Modular, PEP8-friendly codebase** — reusable `src/` modules, not a single
-  monolithic script
+* 📊 Interactive supply chain analytics dashboard
+* 📈 Sales and revenue trend analysis
+* 📦 Inventory monitoring and stock-level analysis
+* 🚚 Supplier performance and delivery analysis
+* 🏭 Warehouse performance analytics
+* 🔮 Machine learning-based demand forecasting
+* 🤖 Comparison of multiple forecasting models
+* ⚠️ Low-stock and demand-risk identification
+* 📉 Interactive model evaluation
+* 📊 Feature importance analysis
+* 📄 CSV and PDF report generation
+* 🔎 Dynamic filtering across products, suppliers, warehouses, regions, and dates
+* 🌓 Interactive dashboard interface with responsive visualizations
 
 ---
 
-## 📈 Key Business Insights
+## 🧠 Machine Learning Pipeline
 
-This dashboard enables businesses to:
+The demand forecasting module follows an end-to-end machine learning workflow:
 
-- 📊 Monitor sales, revenue, and profit trends.
-- 📦 Track inventory levels and identify low-stock items.
-- 🚚 Evaluate supplier performance and delivery efficiency.
-- 🏭 Analyze warehouse utilization and operational performance.
-- 🤖 Forecast future product demand using Machine Learning.
-- 📈 Support data-driven decision-making through interactive dashboards and KPIs.
-
-## 🗂️ Folder Structure
-
+```text
+Supply Chain Dataset
+        ↓
+Data Cleaning
+        ↓
+Missing Value Handling
+        ↓
+Feature Engineering
+        ↓
+Categorical Encoding
+        ↓
+Train / Test Split
+        ↓
+Model Training
+        ↓
+Model Evaluation
+        ↓
+Best Model Selection
+        ↓
+Future Demand Forecast
 ```
-supply_chain_dashboard/
-├── app.py                     # Streamlit dashboard (entry point)
-├── config.py                  # Central paths & constants
+
+### Models
+
+The forecasting module supports:
+
+* Linear Regression
+* Random Forest
+* XGBoost
+
+Models are evaluated using:
+
+* MAE
+* RMSE
+* R² Score
+
+The best-performing model can then be saved and reused for future predictions.
+
+---
+
+## 📊 Dashboard Modules
+
+### 🏠 Executive Overview
+
+Provides a high-level view of supply chain performance through:
+
+* Revenue
+* Profit
+* Orders
+* Inventory
+* Delivery performance
+* Stock availability
+* Supplier performance
+* Demand trends
+
+### 📈 Sales Analytics
+
+Analyze:
+
+* Revenue trends
+* Profit trends
+* Product performance
+* Category performance
+* Regional sales
+* Top-selling products
+* Order distribution
+
+### 📦 Inventory Analytics
+
+Monitor:
+
+* Current inventory levels
+* Inventory trends
+* Low-stock products
+* Inventory turnover
+* Product contribution
+* ABC/Pareto analysis
+
+### 🚚 Supplier Analytics
+
+Evaluate:
+
+* Supplier performance
+* Lead time
+* Delivery delays
+* Supplier rankings
+* Order distribution
+* Supplier reliability
+
+### 🏭 Warehouse Analytics
+
+Analyze:
+
+* Warehouse utilization
+* Inventory distribution
+* Transportation modes
+* Warehouse performance
+* Regional demand
+
+### 🔮 Demand Forecasting
+
+Forecast future demand for selected products using machine learning.
+
+Users can compare different models and visualize:
+
+* Actual vs predicted demand
+* Model performance
+* Feature importance
+* Future demand trends
+
+### 📄 Reports
+
+Generate downloadable:
+
+* CSV reports
+* PDF reports
+
+based on the selected dashboard filters and analysis.
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology       | Purpose                   |
+| ---------------- | ------------------------- |
+| Python           | Core development          |
+| Pandas           | Data manipulation         |
+| NumPy            | Numerical computation     |
+| Scikit-learn     | Machine learning          |
+| XGBoost          | Gradient boosting         |
+| Plotly           | Interactive visualization |
+| Streamlit        | Dashboard development     |
+| Joblib           | Model persistence         |
+| SciPy            | Statistical analysis      |
+| ReportLab / FPDF | PDF reporting             |
+
+---
+
+## 🗂️ Project Structure
+
+```text
+supply-chain-intelligence/
+│
+├── app.py
+├── config.py
 ├── requirements.txt
 ├── README.md
+│
 ├── data/
-│   └── supply_chain_data.csv  # Generated synthetic dataset (55k+ rows)
-├── notebooks/                 # (optional) exploratory notebooks
+│   └── supply_chain_data.csv
+│
 ├── src/
-│   ├── __init__.py
-│   ├── data_generator.py      # Synthetic dataset generator
-│   ├── data_processing.py     # Cleaning, feature engineering, filters
-│   ├── kpi.py                 # KPI, ABC analysis, supplier/warehouse ranking
-│   ├── visualizations.py      # Plotly chart builders
-│   └── forecasting.py         # Model training, evaluation, forecasting
+│   ├── data_generator.py
+│   ├── data_processing.py
+│   ├── kpi.py
+│   ├── visualizations.py
+│   └── forecasting.py
+│
 ├── model/
-│   ├── best_demand_model.joblib   # Saved best model (generated on first run)
-│   └── label_encoders.joblib      # Saved encoders for inference
+│   ├── best_demand_model.joblib
+│   └── label_encoders.joblib
+│
 └── assets/
-    └── style.css               # Dashboard theming
+    └── style.css
 ```
 
 ---
 
-## 🛠️ Installation (Windows)
+## ⚙️ Installation
 
-1. **Install Python 3.10+** if you don't already have it (from python.org),
-   and make sure "Add Python to PATH" is checked during installation.
+### 1. Clone the repository
 
-2. **Open Command Prompt / PowerShell** in the project folder:
-   ```bash
-   cd path\to\supply_chain_dashboard
-   ```
+```bash
+git clone https://github.com/YOUR_USERNAME/supply-chain-intelligence.git
+cd supply-chain-intelligence
+```
 
-3. *(Recommended)* Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate
-   ```
+### 2. Create a virtual environment
 
-4. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+python -m venv venv
+```
 
----
+### 3. Activate the environment
 
-## ▶️ How to Run
+**Windows:**
 
-The dataset (`data/supply_chain_data.csv`) is already generated and included,
-so you can launch the dashboard immediately:
+```bash
+venv\Scripts\activate
+```
+
+### 4. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run the application
 
 ```bash
 streamlit run app.py
 ```
 
-Your browser will open automatically at `http://localhost:8501`.
+The dashboard will be available at:
 
-**To regenerate the dataset** (e.g. with a different random sample):
-```bash
-python src/data_generator.py
+```text
+http://localhost:8501
 ```
-
-**First-time forecasting:** Open the "🔮 Demand Forecasting" page and click
-**"Train / Retrain Models"** — this trains and compares all three models and
-saves the best one to `model/best_demand_model.joblib` for reuse.
 
 ---
 
-## 🧠 Required Libraries
+## 📊 Dataset
 
-| Library | Purpose |
-|---|---|
-| pandas / numpy | Data manipulation |
-| scikit-learn | Linear Regression, Random Forest, metrics, preprocessing |
-| xgboost | Gradient-boosted forecasting model |
-| plotly | Interactive charts |
-| streamlit | Dashboard framework |
-| joblib | Model persistence |
-| scipy | Statistical helpers |
-| matplotlib / seaborn | Static plotting support |
-| fpdf2 | PDF report export |
+The project uses a synthetic supply-chain dataset containing information related to:
 
-All are pinned in `requirements.txt`.
+* Orders
+* Products
+* Customers
+* Suppliers
+* Warehouses
+* Inventory
+* Shipping
+* Demand
+* Sales
+* Operational metrics
+
+The dataset is intended for **educational and portfolio purposes**.
 
 ---
 
@@ -308,18 +425,13 @@ Future Demand Prediction
 - Records: 55,000+
 - Columns: 30
 - Domains: Orders, Products, Warehouses, Suppliers, Shipping, Inventory, Demand.
+  
+## 👨‍💻 Author
 
-## 🔮 Future Improvements
+**Janarthanan G**
 
-- Integrate Facebook Prophet / statsmodels SARIMA for time-series-native forecasting
-- Add real-time data ingestion (API / database connector)
-- Role-based authentication for multi-user dashboards
-- Automated email alerts for low-stock / high-delay conditions
-- Deploy to Streamlit Community Cloud or an internal server
-
----
-
-## 👤 Author
+AI/ML & Data Analytics Enthusiast
+Python | Machine Learning | Data Analytics | Streamlit
 
 Built by **Saurav** (MCA student) as a portfolio project targeting Data
 Analyst roles.
