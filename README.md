@@ -264,17 +264,6 @@ The dataset is intended for **educational and portfolio purposes**.
 
 Explore the interactive pages of the **Supply Chain Analytics Dashboard**.
 
----
-
-### 🏠 Dashboard Overview
-
-The landing page provides a complete summary of the supply chain with key business KPIs, filters, and quick insights.
-
-<p align="center">
-  <img src="assets/screenshots/dashboard_overview.png" width="900">
-</p>
-
----
 
 ### 📊 Home Dashboard
 
