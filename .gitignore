@@ -1,0 +1,23 @@
+# Virtual Environment
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Streamlit cache
+.streamlit/
+
+# Logs
+*.log
+
+# Operating System
+.DS_Store
+Thumbs.db
