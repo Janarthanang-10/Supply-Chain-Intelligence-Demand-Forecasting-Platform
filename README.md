@@ -422,5 +422,3 @@ Future Demand Prediction
 AI/ML & Data Analytics Enthusiast
 Python | Machine Learning | Data Analytics | Streamlit
 
-Built by **Saurav** (MCA student) as a portfolio project targeting Data
-Analyst roles.
